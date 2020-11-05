@@ -1,5 +1,6 @@
 ---
 title: Tools & Links
+layout: post
 # All the Categories of posts
 # v2.0
 # https://github.com/cotes2020/jekyll-theme-chirpy
