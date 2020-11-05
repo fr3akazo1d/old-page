@@ -64,7 +64,7 @@ title: Tools & Links
 </ul>
 <hr>
 <h2>Footprinting tools</h2>
-
+ <hr style="width:50%"> 
 <h3>People Search Tools</h3>
 <ul>
 	<li>411 <a href="www.411.com" target="_blank">&#x1f517; Link</a></li>
