@@ -43,3 +43,47 @@ title: Tools & Links
 	<dt>Gobuster <a href="https://tools.kali.org/web-applications/gobuster" target="_blank">&#x1f517; Link</a></dt>
 	<dd>gobuster dir -u http://&#8810;ip-address&#8811; -w &#8810;wordlist&#8811;</dd>
 </dl>
+
+<hr>
+
+<h1>CEH Tools, Sites and References</h1>
+<h2>Vulnerability Research Sites</h2>
+<ul>
+	<li>CodeRed Center <a href="www.eccouncil.org" target="_blank">&#x1f517; Link</a></li>
+	<li>Exploit Database <a href="www.exploit-db.com" target="_blank">&#x1f517; Link</a></li>
+	<li>HackerStorm <a href="hackerstrom.co.uk" target="_blank">&#x1f517; Link</a></li>
+	<li>Help Net Security <a href="www.net-security.org" target="_blank">&#x1f517; Link</a></li>
+	<li>MSVR <a href="https://technet.microsoft.com" target="_blank">&#x1f517; Link</a></li>
+	<li>National Vulnerability Database <a href="http://nvd.nist.gov" target="_blank">&#x1f517; Link</a></li>
+	<li>SC Media <a href="www.scmagazine.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Secunia <a href="www.secunia.com" target="_blank">&#x1f517; Link</a></li>
+	<li>SecuriTeam <a href="www.securiteam.com" target="_blank">&#x1f517; Link</a></li>
+	<li>SecurityFocus <a href="www.securityfocus.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Security Magazine <a href="www.securitymagazine.com" target="_blank">&#x1f517; Link</a></li>
+	<li>SecurityTracker <a href="www.securitytracker.com" target="_blank">&#x1f517; Link</a></li>
+</ul>
+<hr>
+<h2>Footprinting tools</h2>
+
+<h3>People Search Tools</h3>
+<ul>
+	<li>411 <a href="www.411.com" target="_blank">&#x1f517; Link</a></li>
+	<li>AnyWhow <a href="www.anywho.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Intelius <a href="www.intelius.com" target="_blank">&#x1f517; Link</a></li>
+	<li>PeekYou<a href="www.peekyou.com" target="_blank">&#x1f517; Link</a></li>
+	<li>People Search Now <a href="peoplesearchnow.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Veromi <a href="www.veromi.net" target="_blank">&#x1f517; Link</a></li>
+	<li>ZabaSearch <a href="www.zabasearch.com" target="_blank">&#x1f517; Link</a></li>
+	<li>ZoomInfo <a href="http://zoominfo.com" target="_blank">&#x1f517; Link</a></li>
+</ul>
+
+
+<h3>Competitive Intelligence</h3>
+<ul>
+	<li>Euromonitor <a href="www.euromonitor.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Experian <a href="www.experian.com" target="_blank">&#x1f517; Link</a></li>
+	<li>MarketWatch <a href="www.marketwatch.com" target="_blank">&#x1f517; Link</a></li>
+	<li>The Search Monitor <a href="www.thesearchmonitor.com" target="_blank">&#x1f517; Link</a></li>
+	<li>SEC Info <a href="www.secinfo.com" target="_blank">&#x1f517; Link</a></li>
+	<li>Wall Street Transcript <a href="www.twst.com" target="_blank">&#x1f517; Link</a></li>
+</ul>
