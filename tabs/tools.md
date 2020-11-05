@@ -54,6 +54,7 @@ layout: post
 <center>
 <h1>CEH Tools, Sites and References</h1>
 <h2>Vulnerability Research Sites</h2>
+<hr style="width:50%">
 </center>
 <ul>
 	<li>CodeRed Center <a href="www.eccouncil.org" target="_blank">&#x1f517; Link</a></li>
@@ -72,8 +73,8 @@ layout: post
 <hr>
 <center>
 <h2>Footprinting tools</h2>
- <hr style="width:50%"> 
 <h3>People Search Tools</h3>
+<hr style="width:50%">
 </center>
 <ul>
 	<li>411 <a href="www.411.com" target="_blank">&#x1f517; Link</a></li>
@@ -88,6 +89,7 @@ layout: post
 
 <center>
 <h3>Competitive Intelligence</h3>
+<hr style="width:50%">
 </center>
 <ul>
 	<li>Euromonitor <a href="www.euromonitor.com" target="_blank">&#x1f517; Link</a></li>
