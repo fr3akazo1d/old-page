@@ -15,7 +15,7 @@ layout: post
 </center>
 <hr>
 <center>
-<h2>Friends Writeups</h2>
+<h1>Friends Writeups</h1>
 </center>
 <ul>
 	<li>Zebra777 <a href="https://zebra777.github.io" target="_blank">&#x1f517; Link</a></li>
@@ -24,7 +24,7 @@ layout: post
 </ul>
 <hr>
 <center>
-<h2>Usefull Github-Tools</h2>
+<h1>Usefull Github-Tools</h1>
 </center>
 <dl>
 	<dt>Rustscan <a href="https://github.com/RustScan/RustScan" target="_blank">&#x1f517; Link</a></dt>
@@ -41,7 +41,7 @@ layout: post
 <hr>
 
 <center>
-<h2>Common Tools</h2>
+<h1>Common Tools</h1>
 </center>
 <dl>
 	<dt>nmap <a href="https://nmap.org/" target="_blank">&#x1f517; Link</a></dt>
