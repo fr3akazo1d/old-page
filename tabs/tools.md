@@ -85,8 +85,9 @@ layout: post
 	<li>ZoomInfo <a href="http://zoominfo.com" target="_blank">&#x1f517; Link</a></li>
 </ul>
 
-
+<center>
 <h3>Competitive Intelligence</h3>
+</center>
 <ul>
 	<li>Euromonitor <a href="www.euromonitor.com" target="_blank">&#x1f517; Link</a></li>
 	<li>Experian <a href="www.experian.com" target="_blank">&#x1f517; Link</a></li>
