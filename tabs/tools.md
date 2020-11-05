@@ -13,15 +13,18 @@ layout: post
 <p> I have also some links to Writeups and Blog-posts form my Hacking-Friends. :) </p>
 </center>
 <hr>
-
+<center>
 <h2>Friends Writeups</h2>
+</center>
 <ul>
 	<li>Zebra777 <a href="https://zebra777.github.io" target="_blank">&#x1f517; Link</a></li>
 	<li>MarCorei7 <a href="https://marcorei7.wordpress.com/blogposts/" target="_blank">&#x1f517; Link</a></li>
 	<li>Marnick <a href=" https://marnick39.gitlab.io/pages" target="_blank">&#x1f517; Link</a></li>
 </ul>
 <hr>
+<center>
 <h2>Usefull Github-Tools</h2>
+</center>
 <dl>
 	<dt>Rustscan <a href="https://github.com/RustScan/RustScan" target="_blank">&#x1f517; Link</a></dt>
 	<dd>rustscan &#8810;ip-address&#8811; --ulimit 5000 -- -sC -sV -oN nmap/initial | tee rustscan-output.txt</dd>
@@ -36,8 +39,9 @@ layout: post
 
 <hr>
 
-
+<center>
 <h2>Common Tools</h2>
+</center>
 <dl>
 	<dt>nmap <a href="https://nmap.org/" target="_blank">&#x1f517; Link</a></dt>
 	<dd>nmap -sC -sV -oN nmap/initial &#8810;ip-address&#8811;</dd>
@@ -46,9 +50,10 @@ layout: post
 </dl>
 
 <hr>
-
+<center>
 <h1>CEH Tools, Sites and References</h1>
 <h2>Vulnerability Research Sites</h2>
+</center>
 <ul>
 	<li>CodeRed Center <a href="www.eccouncil.org" target="_blank">&#x1f517; Link</a></li>
 	<li>Exploit Database <a href="www.exploit-db.com" target="_blank">&#x1f517; Link</a></li>
@@ -64,9 +69,11 @@ layout: post
 	<li>SecurityTracker <a href="www.securitytracker.com" target="_blank">&#x1f517; Link</a></li>
 </ul>
 <hr>
+<center>
 <h2>Footprinting tools</h2>
  <hr style="width:50%"> 
 <h3>People Search Tools</h3>
+</center>
 <ul>
 	<li>411 <a href="www.411.com" target="_blank">&#x1f517; Link</a></li>
 	<li>AnyWhow <a href="www.anywho.com" target="_blank">&#x1f517; Link</a></li>
