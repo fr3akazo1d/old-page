@@ -108,6 +108,8 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 14.14 seconds
 ``` 
 
+## notice.txt output 
+
 output of text file form ftp-share:
 
 ```sh
@@ -122,6 +124,8 @@ bat notice.txt
 ───────┴──────────────────────────────────────────────────────────────────  
 ```
 
+## test.log output
+
 Found another file on the share (hidden file). 
 
 output of the test.log file form FTP-share:
@@ -135,7 +139,7 @@ output of the test.log file form FTP-share:
 ───────┴──────────────────────────────────────────────────────────────────
 ```
 
-gobuster output:
+## gobuster output
 
 ```sh
 ❯ gobuster dir -u http://startup.thm -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
