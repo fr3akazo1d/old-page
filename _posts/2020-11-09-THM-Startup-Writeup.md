@@ -38,7 +38,7 @@ image: /assets/img/thm-images/THM-Startup.png
 | --------- | -------- |
 | namp     | nmap -sC -sV -oN nmap/initial $ip|
 | ftp | ftp $ip |
-| gobuster | gobuster dir -u http://10.10.180.221 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt | 
+| gobuster | gobuster dir -u http://$ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt | 
 | nc | nc -lnvp 9901 |
 
 # open ports
