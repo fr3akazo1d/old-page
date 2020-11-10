@@ -1,10 +1,20 @@
 ---
 title: Writeup - Startup
 author: Fr3akazo1d!
-date: 2020-11-09 
-categories: [Hacking, CTF]
-tags: [tryhackeme, Startup, Wireshark, spicy, cron, enumeration, gobuster]
+date: {}
+categories:
+  - Hacking
+  - CTF
+tags:
+  - tryhackeme
+  - Startup
+  - Wireshark
+  - spicy
+  - cron
+  - enumeration
+  - gobuster
 image: /assets/img/thm-images/THM-Startup.png
+published: true
 ---
 # General Information
 
@@ -215,7 +225,7 @@ ftp>
 
 Now we have a php-reverse-shell script on the FTP-Server: 
 
-image
+![Shell uploaded to FTP-Share]({{site.baseurl}}/assets/img/thm-image/THM-Startup-3.png)
 
 # Exploitation
 
