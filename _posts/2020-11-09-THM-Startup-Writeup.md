@@ -215,7 +215,7 @@ ftp>
 
 Now we have a php-reverse-shell script on the FTP-Server: 
 
-image
+![Shell uploaded to FTP-Share]({{site.baseurl}}/assets/img/thm-image/THM-Startup-3.png)
 
 # Exploitation
 
