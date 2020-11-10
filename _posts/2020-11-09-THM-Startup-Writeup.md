@@ -42,11 +42,12 @@ image: /assets/img/thm-images/THM-Startup.png
 | nc | nc -lnvp 9901 |
 
 # open ports
-| Port | Service | Version |
-| ---- | ----------- | ------- |
-| 21   | ftp-server | vsftpd 3.0.3 |
-| 22   | ssh |  OpenSSH 7.2p2 |
-| 80 | Http-Server|  Apache httpd 2.4.18 |
+
+| Port | Service     | Version             |
+| ---- | ----------- | ------------------- |
+| 21   | ftp-server  | vsftpd 3.0.3        |
+| 22   | ssh         | OpenSSH 7.2p2       |
+| 80   | Http-Server | Apache httpd 2.4.18 |
 
 # Summary (Spoiler)
 
