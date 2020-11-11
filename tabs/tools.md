@@ -20,7 +20,7 @@ layout: post
 <ul>
 	<li>Zebra777 <a href="https://zebra777.github.io" target="_blank">&#x1f517; Link</a></li>
 	<li>MarCorei7 <a href="https://marcorei7.wordpress.com/blogposts/" target="_blank">&#x1f517; Link</a></li>
-	<li>Marnick <a href=" https://marnick39.gitlab.io/pages" target="_blank">&#x1f517; Link</a></li>
+	<li>Marnick <a href="https://marnick.net/" target="_blank">&#x1f517; Link</a></li>
 </ul>
 <hr>
 <center>
