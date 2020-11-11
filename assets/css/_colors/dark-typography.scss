@@ -20,8 +20,8 @@
   /* common color */
   --text-color: rgb(175, 176, 177);
   --text-muted-color: rgb(107, 116, 124);
-  --link-color: rgb(0, 102, 204);
-  --link-underline-color: rgb(0, 102, 204);
+  --link-color: rgb(255, 255, 0);
+  --link-underline-color: rgb(255, 255, 0);
   --main-border-color: rgb(204, 0, 0);
   --button-bg: rgb(39, 40, 43);
   --blockquote-border-color: rgb(66, 66, 66);
@@ -34,7 +34,7 @@
   --label-color: rgb(0, 102, 204);
 
   /* Sidebar */
-  --nav-cursor-color: rgb(0, 102, 204);
+  --nav-cursor-color: rgb(255, 255, 0);
   --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
 
   /* Top Bar */
