@@ -14,11 +14,6 @@
   path: tabs
   url: categories
 -
-  name: "Blog"
-  icon: "fas fa-newspaper-o"
-  path: tabs
-  url: posts
--
   name: "Tags"
   icon: "fas fa-tags"
   path: tabs
