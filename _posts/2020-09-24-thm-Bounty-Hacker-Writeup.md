@@ -1,5 +1,5 @@
 ---
-title: "TryhackMe - BountyHacker"
+title: "Writeup - THM - BountyHacker"
 description: "Walkthrough of Bounty Hacker of TryHackMe"
 ate: 2020-09-24 23:14:00 +0100 
 author: Fr3akazo1d!
