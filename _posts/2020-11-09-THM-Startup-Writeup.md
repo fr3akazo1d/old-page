@@ -1,5 +1,5 @@
 ---
-title: Writeup - Startup
+title: Writeup - THM - Startup
 author: Fr3akazo1d!
 date: 2020-11-09 
 categories: [Hacking, CTF]
