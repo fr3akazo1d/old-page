@@ -1,5 +1,5 @@
 ---
-title: Writeup - Tartarus
+title: Writeup - THM - Tartarus
 author: Fr3akazo1d!
 date: 2020-10-27 23:14:00 +0100
 categories: [Hacking, CTF]
