@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Writeup - Brooklyn- NineNine
+title: Writeup - THM - Brooklyn-NineNine
 description: "Walkthrough of Brooklyn NineNine of TryHackme"
 tags: [TryHackeMe, Brooklyn-NineNine, Hacking, pwned]
 author: Fr3akazo1d!
