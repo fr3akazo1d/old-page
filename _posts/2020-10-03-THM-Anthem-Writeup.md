@@ -6,9 +6,29 @@ tags: [TryHackeMe, Anthem, Hacking, pwned]
 author: Fr3akazo1d!
 ---
 
-Difficulty: Easy
+# General Information
 
-TryHackMe-Tags: Windows, CMS, enumeration, Weekly Challange
+| Room        | Date        | Difficulty | Tags                                   | Time     |
+| ----------- | ----------- | ---------- | -------------------------------------- | -------- |
+| Anthem      | 03.10.2020  | easy       | Windows, CMS, enumeration, Weekly Challange | -- |
+
+# Used Programs
+
+| Program  | Command |
+| --------- | -------- |
+| namp     | nmap -sC -sV -oN nmap/initial $ip -Pn|
+| ftp | ftp $ip |
+| rdesktop | rdesktop -u s* -p U***************! -d anthem.com $ip |
+
+# open ports
+
+| Port | Service     | Version             |
+| ---- | ----------- | ------------------- |
+| 80   | Http-Server  | Microsoft HTTPAPI httpd 2.0        |
+| 135   | msrpc         | Microsoft Windows RPC       |
+| 139   | netbios-ssn | Microsoft Windows netbios-ssn |
+| 445 |  microsoft-ds? | |
+| 389 | ms-wbt-server | Microsoft Terminal Services |
 
 This Room is about a Web-Server where we have to find different flags, usernames and possible Passwords on the Web-Server. 
 
