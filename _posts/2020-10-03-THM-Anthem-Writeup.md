@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Writeup - Anthem
+title: Writeup - THM - Anthem
 description: "Walkthrough of Anthem of TryHackme"
 tags: [TryHackeMe, Anthem, Hacking, pwned]
 author: Fr3akazo1d!
