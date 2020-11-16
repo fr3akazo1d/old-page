@@ -1,5 +1,5 @@
 ---
-title: Writeup - Attacktive Directory
+title: Writeup - THM - Attacktive Directory
 author: Fr3akazo1d!
 date: 2020-11-03 
 categories: [Hacking, Walkthrough]
