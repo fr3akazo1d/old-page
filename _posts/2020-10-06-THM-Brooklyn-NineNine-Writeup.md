@@ -6,36 +6,30 @@ tags: [TryHackeMe, Brooklyn-NineNine, Hacking, pwned]
 author: Fr3akazo1d!
 ---
 
-# Global Information 
+# General Information
 
----
+| Room        | Date        | Difficulty | Tags                                   | Time     |
+| ----------- | ----------- | ---------- | -------------------------------------- | -------- |
+| Brooklyn NineNine      | 06.10.2020  | easy       | security, nmap, gobuster, pentest | -- |
 
-Difficulty: 
-- Easy
 
-Open-Ports: 
-- 21
-- 22
-- 80
+# Used Programs
 
-Vulnerability Ports: 
-- 21
+| Program  | Command |
+| --------- | -------- |
+| namp     | nmap -sC -sV -oN nmap/initial $ip -Pn|
+| ftp | ftp $ip |
+| hydra | hydra -t 16 -l j*** -P /usr/share/wordlists/rockyou.txt 10.10.93.39 ssh | 
+| ssh | ssh j***@10.10.93.39 |
+| stegcracker | s********* brooklyn99.jpg /usr/share/wordlists/rockyou.txt | 
 
-Used-Programs:
-- NMAP
-- Gobuster
-- ssh
+# open ports
 
-Used Websites:
-- [GTFOBins](https://gtfobins.github.io/ "GTFOBins")
-
-TryhackMe Tags: 
-- security 
-- nmap
-- Gobuster 
-- pentest
-
----
+| Port | Service     | Version             |
+| ---- | ----------- | ------------------- |
+| 21   | ftp  | vsftpd 3.0.3        |
+| 22   | ssh         | OpenSSH 7.6p1       |
+| 80   | http | Apache httpd 2.4.29 |
 
 On this room, there where 2 Ways to get to the root flag. 
 So i decided to check if i found both ways into the target. 
