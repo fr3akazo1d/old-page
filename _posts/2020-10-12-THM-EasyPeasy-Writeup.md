@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Writeup - Easy-Peasy
+title: Writeup - THM - Easy-Peasy
 description: "Walkthrough of Easy-Peasy of TryHackme"
 tags: [TryHackeMe, EasyPeasy, Hacking, pwned, nmap, gobuster, steganography, cronjob]
 author: Fr3akazo1d!
