@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What the Shell
+title: Writeup - THM - What the Shell
 description: "An introduction to sending and receiving (reverse/bind) shells when exploiting target machines."
 tags: Shell, netcat, socat, metasploit
 author: Fr3akazo1d!
