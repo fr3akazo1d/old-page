@@ -17,7 +17,6 @@ author: Fr3akazo1d!
 | Program  | Command |
 | --------- | -------- |
 | namp     | nmap -sC -sV -oN nmap/initial $ip -Pn|
-| ftp | ftp $ip |
 | rdesktop | rdesktop -u s* -p U***************! -d anthem.com $ip |
 
 # open ports
